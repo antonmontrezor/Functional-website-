@@ -1,0 +1,266 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* styling text */
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.logo {
+    font-size: 38px;
+    color: #005769;
+}
+
+a {
+    font-size: 19px;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 68px;
+}
+
+h2 {
+    font-size: 22px;
+    color: #777777;
+}
+
+p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.container p {
+    font-size: 39px;
+}
+
+.logo,
+a,
+h1,
+h2,
+.container p {
+    font-weight: 700;
+}
+
+/* According to the mock-up, majority of paragraphs have dark grey color of the text; however, in the styleguide the color of the text is medium grey. Therefore, sticking to the design, dark grey was chosen as a font color*/ 
+
+a,
+h1,
+p {
+    color: #333333;
+}
+
+.logo,
+h1 {
+    text-transform: lowercase;
+}
+
+a,
+h2 {
+    text-transform: uppercase;
+}
+
+ul {
+    list-style: none;
+}
+
+.copyright {
+    text-transform: capitalize;
+}
+
+/* creating layouts  */
+
+/* using wrapper to centrilize the content within the page */
+.wrapper {                 
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 150px;
+
+/* styling a background of the header */
+
+    background-image: url(./assets/image-main.jpeg);
+    background-size: cover;
+}
+
+/* placing elements within the header as per design */
+
+.nav-header {
+    height: 200px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-header ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    padding: 15px 25px;
+}
+
+/* styling a hover state of the links */
+
+a:hover {
+    background-color: #16D6D1;
+    border-radius: 10px;
+}
+
+.logo {
+    margin: 0;
+    padding: 0;
+}
+
+header h1 {
+    width: 55%;
+}
+
+/* laying out the elements of the section-1/
+
+/* giving flex property to the wrapper to place its children according to the design */
+.feature-1 .wrapper {
+    display: flex;
+}
+
+.feature-1 .wrapper > img { 
+    width: 30%;
+}
+
+.feature-1 .flex-container {    
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(70% - 40px);
+    margin-left: 40px;
+}
+
+.flex-container img {
+    width: 100%;
+    height: 50%;
+}
+
+.container {
+    width: 100%;
+    height: 50%;
+    padding: 30px 140px;
+
+    text-align: center;
+
+    background-color: #F6F8FA;
+}
+
+/* separating two sections with a margin */
+
+.feature-1 {
+    margin-bottom: 40px;
+}
+
+/* laying out the elements of the section-2*/
+
+/* giving flex property to the wrapper to place its children according to the design */
+
+.feature-2 .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feature-2 .flex-container { 
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(70% - 40px);
+    margin-right: 40px;
+    
+}
+
+.feature-2 .wrapper > img:first-of-type { 
+    width: 30%;
+}
+
+.feature-2 .container {
+    padding: 30px 180px;
+}
+
+.feature-2 .wrapper > img:nth-of-type(2),
+.feature-2 .wrapper > img:last-of-type {
+    width: calc(50% - 20px);
+    margin-top: 40px;
+}
+
+.feature-2 .wrapper > img:nth-of-type(2) {
+    margin-right: 20px;
+}
+        
+.feature-2 .wrapper > img:last-of-type {
+    margin-left: 20px;
+}
+
+/* styling footer */
+
+footer {
+    background-color: #F6F8FA;
+    height: 55vh;
+    margin-top: 150px;
+}
+
+footer .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 55vh;
+   
+}
+
+.nav-footer {
+    display: flex;
+    width: 100%;
+    height: 85%;
+    padding-top: 75px;
+}
+
+.nav-footer .logo {
+    width: 33%;
+}
+
+.nav-footer ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 80%;
+    width: 30%;
+    margin-top: 5px;
+    padding: 0;
+}
+
+.nav-footer li {
+    padding: 15px;
+}
+
+.nav-footer p:nth-of-type(2) {
+    width: 37%;
+    margin-top: 10px;
+    padding-left: 40px;
+    line-height: 1.75em;
+}
+
+.copyright {
+    width: 100%;
+    height: 15%;
+    padding-top: 15px;
+    border-top: 1px solid #777777;
+    margin: 0;
+}
